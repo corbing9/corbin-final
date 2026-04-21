@@ -59,41 +59,53 @@ const Resume = () => {
           <p className="text-xs uppercase tracking-[0.3em] text-accent">Résumé</p>
           <h1 className="mt-3 font-display text-5xl md:text-6xl">Corbin Giles</h1>
           <p className="mt-4 text-lg text-muted-foreground">
-            Finance undergraduate · Aspiring equity analyst
+            Entrepreneur · Singer · Pickleballer
           </p>
         </header>
 
         <Section icon={GraduationCap} title="Education">
           <Item
-            role="B.S. in Finance"
-            org="University · Marriott School of Business"
-            date="Expected 2026"
+            role="Undergraduate Student"
+            org="Brigham Young University"
+            date="Current"
             bullets={[
-              "Relevant coursework: Corporate Finance, Investments, Financial Modeling, Statistics",
-              "GPA: 3.8 / 4.0",
-              "Web development minor coursework",
+              "GPA: 3.6",
+              "Member of the BYU pickleball team",
+            ]}
+          />
+          <Item
+            role="High School Diploma"
+            org="FAC High School (senior year)"
+            date="Graduated"
+            bullets={[
+              "Graduated in the top 20% of class",
+              "Captain of the tennis team — undefeated season",
+              "Captain of the football team",
+              "Qualified for All-State (tennis) two years",
             ]}
           />
         </Section>
 
         <Section icon={Briefcase} title="Experience">
           <Item
-            role="Finance Intern"
-            org="Regional Investment Firm"
-            date="Summer 2024"
+            role="Direct Support Professional"
+            org="RISE Services"
+            date="9 months – Present"
             bullets={[
-              "Built three-statement models for small-cap equity coverage initiations",
-              "Authored a 12-page initiation report later used by senior analysts",
-              "Maintained sector dashboards in Tableau tracking 40+ tickers",
+              "Provide daily care, companionship, and support for individuals with special needs",
+              "Assist with daily living skills, community outings, and personal goals",
+              "Build trust and lasting relationships with the people I serve",
             ]}
           />
           <Item
-            role="Research Assistant"
-            org="Department of Finance"
-            date="2023 – Present"
+            role="Farm Hand"
+            org="Hillside Meadows Ranch"
+            date="Previous"
             bullets={[
-              "Cleaned and merged CRSP / Compustat panels in Python (pandas)",
-              "Co-authored white paper on momentum factor decay",
+              "Tended cattle and helped with day-to-day herd care",
+              "Repaired broken fences and built enclosures for animals",
+              "Cared for emus and managed gardening responsibilities",
+              "Operated tractors and skid steers around the property",
             ]}
           />
         </Section>
@@ -101,30 +113,31 @@ const Resume = () => {
         <Section icon={Wrench} title="Skills">
           <div className="grid gap-6 md:grid-cols-2">
             <div>
-              <h4 className="text-sm uppercase tracking-wider text-muted-foreground">Tools</h4>
-              <p className="mt-2">Excel · PowerPoint · Tableau · Bloomberg Terminal · Capital IQ</p>
+              <h4 className="text-sm uppercase tracking-wider text-muted-foreground">Hands-On</h4>
+              <p className="mt-2">Tractors · Skid steers · Fence & enclosure building · Animal care</p>
             </div>
             <div>
-              <h4 className="text-sm uppercase tracking-wider text-muted-foreground">Code</h4>
-              <p className="mt-2">Python · SQL · HTML / CSS · JavaScript · R</p>
+              <h4 className="text-sm uppercase tracking-wider text-muted-foreground">People</h4>
+              <p className="mt-2">Direct support care · Patience · Team leadership · Communication</p>
             </div>
             <div>
-              <h4 className="text-sm uppercase tracking-wider text-muted-foreground">Finance</h4>
-              <p className="mt-2">DCF · LBO · Comps · Three-statement modeling · Equity research</p>
+              <h4 className="text-sm uppercase tracking-wider text-muted-foreground">Athletics</h4>
+              <p className="mt-2">Pickleball · Tennis · Football · Coaching teammates</p>
             </div>
             <div>
-              <h4 className="text-sm uppercase tracking-wider text-muted-foreground">Languages</h4>
-              <p className="mt-2">English (native) · Spanish (conversational)</p>
+              <h4 className="text-sm uppercase tracking-wider text-muted-foreground">Other</h4>
+              <p className="mt-2">Singing · Entrepreneurial mindset</p>
             </div>
           </div>
         </Section>
 
         <Section icon={Award} title="Honors & Activities">
           <ul className="space-y-2 text-foreground/80">
-            <li>• Dean's List — multiple semesters</li>
-            <li>• Finance Society — VP of Programming</li>
-            <li>• CFA Institute Research Challenge — team finalist</li>
-            <li>• Intramural Pickleball — captain & undefeated 2024 spring season</li>
+            <li>• BYU Pickleball Team — current member</li>
+            <li>• High school tennis captain — undefeated season</li>
+            <li>• High school football captain</li>
+            <li>• All-State qualifier in tennis (2 years)</li>
+            <li>• Graduated top 20% of high school class</li>
           </ul>
         </Section>
       </main>
