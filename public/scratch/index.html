@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pickleball — A From-Scratch Page by Corbin Giles</title>
+  <meta name="description" content="A hand-coded HTML/CSS page about pickleball: history, rules, gear, video, and a live Tableau dashboard." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body id="top">
+
+  <!-- Navigation back to professional pages -->
+  <div class="scratch-nav">
+    <span class="brand">CG · Pickleball</span>
+    <div>
+      <a href="/">← Back to Professional Site</a>
+      <a href="/resume">Résumé</a>
+      <a href="app.html">Joke Generator →</a>
+    </div>
+  </div>
+
+  <!-- Hero with custom background color -->
+  <header class="hero">
+    <h1>The Joy of Pickleball</h1>
+    <p>A hand-coded love letter to the fastest-growing sport in America — written in plain HTML &amp; CSS, no frameworks allowed.</p>
+  </header>
+
+  <!-- On-page anchors / table of contents -->
+  <nav class="toc">
+    <h3>On this page</h3>
+    <ul>
+      <li><a href="#why">Why I Love It</a></li>
+      <li><a href="#rules">The Rules (in 60 seconds)</a></li>
+      <li><a href="#gear">My Gear</a></li>
+      <li><a href="#gallery">Photo Gallery</a></li>
+      <li><a href="#video">Watch &amp; Learn</a></li>
+      <li><a href="#data">The Data</a></li>
+    </ul>
+  </nav>
+
+  <!-- Section 1: Why I Love It -->
+  <div class="section" id="why">
+    <h2>Why I Love It</h2>
+    <p>Pickleball found me on a sunny Saturday in 2022 and never quite let go. It rewards patience, footwork, and a certain mischievous love for placing the ball exactly where your opponent isn't. Below are the three things that hooked me — short list, big feelings.</p>
+
+    <div class="three-col">
+      <div class="card">
+        <h4>Community</h4>
+        <p>Show up to any open-play session and you'll leave with three new friends and at least one nickname.</p>
+      </div>
+      <div class="card">
+        <h4>Strategy</h4>
+        <p>It looks casual until you realize every dink, drive, and drop is a chess move with a paddle.</p>
+      </div>
+      <div class="card">
+        <h4>Accessibility</h4>
+        <p>You can pick it up in an afternoon and still spend a lifetime trying to master it.</p>
+      </div>
+    </div>
+    <a class="back-top" href="#top">↑ Back to top</a>
+  </div>
+
+  <!-- Section 2: Rules — ordered list with nested unordered list -->
+  <div class="section" id="rules">
+    <h2>The Rules (in 60 seconds)</h2>
+    <p>Here's the cliff-notes version. The ordered list is the flow of a point — the bullets nested inside are the gotchas that catch beginners.</p>
+
+    <ol class="rules-list">
+      <li>
+        Serve underhand and diagonally cross-court.
+        <ul>
+          <li>Both feet behind the baseline</li>
+          <li>Paddle contact below the waist</li>
+          <li>The ball must land in the diagonal service box</li>
+        </ul>
+      </li>
+      <li>
+        Let the ball bounce once on each side (the &ldquo;double bounce rule&rdquo;).
+        <ul>
+          <li>Returner lets the serve bounce</li>
+          <li>Serving team lets the return bounce</li>
+          <li>After that, volleys are fair game — except&hellip;</li>
+        </ul>
+      </li>
+      <li>
+        Stay out of the kitchen on a volley.
+        <ul>
+          <li>The 7-ft non-volley zone is sacred ground</li>
+          <li>You may enter to play a bounced ball, but get out before you volley</li>
+        </ul>
+      </li>
+      <li>
+        Score only when serving. First to 11, win by 2.</li>
+    </ol>
+    <a class="back-top" href="#top">↑ Back to top</a>
+  </div>
+
+  <!-- Section 3: Gear -->
+  <div class="section" id="gear">
+    <h2>My Gear</h2>
+    <p>You don't need much to play, which is part of the magic. Here's what lives in my bag.</p>
+    <div class="three-col">
+      <div class="card">
+        <h4>Paddle</h4>
+        <p>Mid-weight graphite face — soft enough for dinks, firm enough for drives.</p>
+      </div>
+      <div class="card">
+        <h4>Balls</h4>
+        <p>Outdoor balls (40 holes, harder plastic) for windy days at the park.</p>
+      </div>
+      <div class="card">
+        <h4>Court Shoes</h4>
+        <p>Lateral support matters more than cushion — your ankles will thank you.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 4: Image gallery (non-Bootstrap images) -->
+  <div class="section" id="gallery">
+    <h2>Photo Gallery</h2>
+    <p>A few favorite shots from courts I've called home.</p>
+    <div class="three-col gallery">
+      <img src="/images/pickleball-hero.jpg" alt="Pickleball paddle and ball on a court at golden hour" />
+      <img src="/images/pickleball-paddle.jpg" alt="Wooden paddle and yellow ball flat lay" />
+      <img src="/images/pickleball-players.jpg" alt="Two players in a doubles rally at sunset" />
+    </div>
+    <a class="back-top" href="#top">↑ Back to top</a>
+  </div>
+
+  <!-- Section 5: YouTube embed -->
+  <div class="section" id="video">
+    <h2>Watch &amp; Learn</h2>
+    <p>If you've never seen pro pickleball, here's a taste. The reflexes are absurd.</p>
+    <div class="video-wrap">
+      <iframe
+        src="https://www.youtube.com/embed/AKodxIK8ARA"
+        title="Pro Pickleball Highlights"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Section 6: Live interactive Tableau embed -->
+  <div class="section" id="data">
+    <h2>The Data</h2>
+    <p>Pickleball's growth has been one of the most striking stories in American recreation. Below is a live, interactive Tableau visualization — hover, click, and explore.</p>
+
+    <div class="tableau-wrap">
+      <div class='tableauPlaceholder' id='viz-pickleball' style='position: relative; width: 100%;'>
+        <noscript>
+          <a href='#'><img alt='Pickleball Growth' src='https://public.tableau.com/static/images/Pi/PickleballPlayersbyAge/Dashboard1/1_rss.png' style='border: none' /></a>
+        </noscript>
+        <object class='tableauViz' style='display:none; width:100%; height:600px;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='PickleballPlayersbyAge/Dashboard1' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image' value='https://public.tableau.com/static/images/Pi/PickleballPlayersbyAge/Dashboard1/1.png' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
+        </object>
+      </div>
+    </div>
+    <script type='text/javascript'>
+      (function() {
+        var divElement = document.getElementById('viz-pickleball');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width = '100%';
+        vizElement.style.height = '627px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      })();
+    </script>
+
+    <p style="text-align:center;">
+      <a class="app-link" href="app.html">🥒 Try the Pickleball Joke Generator</a>
+    </p>
+  </div>
+
+  <footer class="scratch-footer">
+    <p>Hand-coded by Corbin Giles · No Bootstrap was harmed in the making of this page.</p>
+    <a href="/" style="color:#e8c290;">← Return to professional site</a>
+  </footer>
+
+</body>
+</html>
