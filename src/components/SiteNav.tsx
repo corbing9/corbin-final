@@ -6,6 +6,7 @@ const links = [
   { to: "/", label: "About" },
   { to: "/resume", label: "Résumé" },
   { to: "/contact", label: "Contact" },
+  { to: "scratch/index.html", label: "Pickleball", external: true },
 ];
 
 const SiteNav = () => {
@@ -17,20 +18,30 @@ const SiteNav = () => {
           Corbin Giles<span className="text-accent">.</span>
         </NavLink>
         <nav className="hidden items-center gap-8 md:flex">
-          {links.map((l) => (
-            <NavLink
-              key={l.to}
-              to={l.to}
-              end
-              className={({ isActive }) =>
-                `text-sm tracking-wide transition-colors ${
-                  isActive ? "text-accent" : "text-foreground/70 hover:text-foreground"
-                }`
-              }
-            >
-              {l.label}
-            </NavLink>
-          ))}
+          {links.map((l) =>
+            l.external ? (
+              <a
+                key={l.to}
+                href={`${import.meta.env.BASE_URL}${l.to}`}
+                className="text-sm tracking-wide transition-colors text-foreground/70 hover:text-foreground"
+              >
+                {l.label}
+              </a>
+            ) : (
+              <NavLink
+                key={l.to}
+                to={l.to}
+                end
+                className={({ isActive }) =>
+                  `text-sm tracking-wide transition-colors ${
+                    isActive ? "text-accent" : "text-foreground/70 hover:text-foreground"
+                  }`
+                }
+              >
+                {l.label}
+              </NavLink>
+            )
+          )}
         </nav>
         <button
           onClick={() => setOpen(!open)}
@@ -43,19 +54,30 @@ const SiteNav = () => {
       {open && (
         <nav className="md:hidden border-t border-border bg-background">
           <div className="container flex flex-col gap-4 py-4">
-            {links.map((l) => (
-              <NavLink
-                key={l.to}
-                to={l.to}
-                end
-                onClick={() => setOpen(false)}
-                className={({ isActive }) =>
-                  `text-sm ${isActive ? "text-accent" : "text-foreground/80"}`
-                }
-              >
-                {l.label}
-              </NavLink>
-            ))}
+            {links.map((l) =>
+              l.external ? (
+                <a
+                  key={l.to}
+                  href={`${import.meta.env.BASE_URL}${l.to}`}
+                  onClick={() => setOpen(false)}
+                  className="text-sm text-foreground/80"
+                >
+                  {l.label}
+                </a>
+              ) : (
+                <NavLink
+                  key={l.to}
+                  to={l.to}
+                  end
+                  onClick={() => setOpen(false)}
+                  className={({ isActive }) =>
+                    `text-sm ${isActive ? "text-accent" : "text-foreground/80"}`
+                  }
+                >
+                  {l.label}
+                </NavLink>
+              )
+            )}
           </div>
         </nav>
       )}
