@@ -148,13 +148,15 @@
     <div class="tableau-wrap">
       <div class='tableauPlaceholder' id='viz-pickleball' style='position: relative; width: 100%;'>
         <noscript>
-          <a href='#'><img alt='Pickleball Growth' src='https://public.tableau.com/static/images/Pi/PickleballPlayersbyAge/Dashboard1/1_rss.png' style='border: none' /></a>
+          <a href='https://public.tableau.com/views/PickleballPlayersbyAge/Dashboard1' target='_blank'>
+            <img alt='Pickleball Growth' src='https://public.tableau.com/static/images/Pi/PickleballPlayersbyAge/Dashboard1/1_rss.png' style='border: none; width: 100%;' />
+          </a>
         </noscript>
-        <object class='tableauViz' style='display:none; width:100%; height:600px;'>
+        <object class='tableauViz' style='width:100%; height:700px;'>
           <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
           <param name='embed_code_version' value='3' />
           <param name='site_root' value='' />
-          <param name='name' value='PickleballPlayersbyAge/Dashboard1' />
+          <param name='name' value='PickleballPlayersbyAge&#47;Dashboard1' />
           <param name='tabs' value='no' />
           <param name='toolbar' value='yes' />
           <param name='static_image' value='https://public.tableau.com/static/images/Pi/PickleballPlayersbyAge/Dashboard1/1.png' />
@@ -172,7 +174,7 @@
         var divElement = document.getElementById('viz-pickleball');
         var vizElement = divElement.getElementsByTagName('object')[0];
         vizElement.style.width = '100%';
-        vizElement.style.height = '627px';
+        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
         var scriptElement = document.createElement('script');
         scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
         vizElement.parentNode.insertBefore(scriptElement, vizElement);
