@@ -4,6 +4,9 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // Base path for GitHub Pages: https://corbing9.github.io/corbin-final/
+  // Uses "/" in dev and on Lovable, "/corbin-final/" only for GH Pages builds.
+  base: process.env.GITHUB_PAGES === "true" ? "/corbin-final/" : "/",
   server: {
     host: "::",
     port: 8080,
