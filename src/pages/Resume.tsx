@@ -75,13 +75,13 @@ const Resume = () => {
           />
           <Item
             role="High School Diploma"
-            org="FAC High School (senior year)"
+            org="Fountain Inn High School (senior year part-time at Greenville Fine Arts Center)"
             date="Graduated"
             bullets={[
               "Graduated in the top 20% of class",
               "Captain of the tennis team — undefeated season",
               "Captain of the football team",
-              "Qualified for All-State (tennis) two years",
+              "All-State choir qualifier (2 years)",
             ]}
           />
         </Section>

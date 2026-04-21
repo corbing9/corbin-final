@@ -22,9 +22,9 @@ const Index = () => {
                 everything.
               </h1>
               <p className="mt-8 max-w-lg text-lg text-muted-foreground">
-                Entrepreneur at heart, singer when the moment calls for it, and
-                pickleballer most weekends. I like building things, helping
-                people, and playing hard.
+                I build things, I sing loud, and I compete hard. Whether it's
+                launching a venture, hitting the stage, or grinding it out on the
+                pickleball court — I show up ready to work.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
