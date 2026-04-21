@@ -54,19 +54,30 @@ const SiteNav = () => {
       {open && (
         <nav className="md:hidden border-t border-border bg-background">
           <div className="container flex flex-col gap-4 py-4">
-            {links.map((l) => (
-              <NavLink
-                key={l.to}
-                to={l.to}
-                end
-                onClick={() => setOpen(false)}
-                className={({ isActive }) =>
-                  `text-sm ${isActive ? "text-accent" : "text-foreground/80"}`
-                }
-              >
-                {l.label}
-              </NavLink>
-            ))}
+            {links.map((l) =>
+              l.external ? (
+                <a
+                  key={l.to}
+                  href={`${import.meta.env.BASE_URL}${l.to}`}
+                  onClick={() => setOpen(false)}
+                  className="text-sm text-foreground/80"
+                >
+                  {l.label}
+                </a>
+              ) : (
+                <NavLink
+                  key={l.to}
+                  to={l.to}
+                  end
+                  onClick={() => setOpen(false)}
+                  className={({ isActive }) =>
+                    `text-sm ${isActive ? "text-accent" : "text-foreground/80"}`
+                  }
+                >
+                  {l.label}
+                </NavLink>
+              )
+            )}
           </div>
         </nav>
       )}
