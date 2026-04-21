@@ -6,6 +6,7 @@ const links = [
   { to: "/", label: "About" },
   { to: "/resume", label: "Résumé" },
   { to: "/contact", label: "Contact" },
+  { to: "scratch/index.html", label: "Pickleball", external: true },
 ];
 
 const SiteNav = () => {
