@@ -18,20 +18,30 @@ const SiteNav = () => {
           Corbin Giles<span className="text-accent">.</span>
         </NavLink>
         <nav className="hidden items-center gap-8 md:flex">
-          {links.map((l) => (
-            <NavLink
-              key={l.to}
-              to={l.to}
-              end
-              className={({ isActive }) =>
-                `text-sm tracking-wide transition-colors ${
-                  isActive ? "text-accent" : "text-foreground/70 hover:text-foreground"
-                }`
-              }
-            >
-              {l.label}
-            </NavLink>
-          ))}
+          {links.map((l) =>
+            l.external ? (
+              <a
+                key={l.to}
+                href={`${import.meta.env.BASE_URL}${l.to}`}
+                className="text-sm tracking-wide transition-colors text-foreground/70 hover:text-foreground"
+              >
+                {l.label}
+              </a>
+            ) : (
+              <NavLink
+                key={l.to}
+                to={l.to}
+                end
+                className={({ isActive }) =>
+                  `text-sm tracking-wide transition-colors ${
+                    isActive ? "text-accent" : "text-foreground/70 hover:text-foreground"
+                  }`
+                }
+              >
+                {l.label}
+              </NavLink>
+            )
+          )}
         </nav>
         <button
           onClick={() => setOpen(!open)}
